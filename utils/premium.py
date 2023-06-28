@@ -16,18 +16,16 @@ def premium_calculator(age_list, sum_insured, city_tier, tenure):
                 f"tier_id.{city_tier}.sum_insured.{sum_insured}.tenure.{tenure}.age_rate.{age}": 1
             },
         )
+
         rate = data["tier_id"][city_tier]["sum_insured"][sum_insured]["tenure"][tenure][
             "age_rate"
         ][age]["rate"]
         rates.append(int(rate))
-    print(age_list)
-    print(rates)
     premium = 0
     for i in range(len(rates) - 1):
         rates[i] = rates[i] / 2
     for rate in rates:
         premium += rate
-    print(rates)
     print("premium", premium)
     return premium
 
