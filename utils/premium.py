@@ -1,7 +1,9 @@
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
 
-
-client = MongoClient("localhost", 27017)
+load_dotenv()
+client = MongoClient(os.getenv("MONGO_DB_URI"))
 db = client["oneassure"]
 premuim_data_collection = db["premium_data"]
 
