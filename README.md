@@ -1,6 +1,10 @@
 # OneAssure-assignment-backend
 **Built with Flask and MongoDB**
 
+### Hosted on AWS and DNS config using Cloudflare
+- Server running on an EC2 instance
+- Proxied requests using Nginx
+- Couldflare DNS is used to redirect the requests from https://srinivasmekala.me to the EC2 instance
 ## Endpoints
 a. /calc-premium**
 
@@ -42,14 +46,14 @@ a. /calc-premium**
 ## Installation Guide
 ### With Docker
 - Clone the Repository:
-  ```git clone https://github.com/sri-nivas1227/OneAssure-assignment-backend```
+  ```$ git clone https://github.com/sri-nivas1227/OneAssure-assignment-backend```
 - Change into the directory
-  ```cd OneAssure-assignment-backend```
+  ```$ cd OneAssure-assignment-backend```
 - Run Docker Compose (Keep the docker daemon running in your PC)
-  ```docker-compose up --build -d```
+  ```$ docker-compose up --build -d```
 - Now you can access the server on [localhost:5000](http://localhost:5000/)
 - Send a POST request to the server with the following body
-  ```{{
+      ```{{
                   "age_list" : [10, 35, 46],
                   "sum_insured" :  '500000',
                   "city_tier" : '1' ,
@@ -59,18 +63,19 @@ a. /calc-premium**
 Note: You need Python3 installed. And MongoDB installed and running.
 Opena a terminal and 👇🏻
 - Clone the Repository:
-  ```git clone https://github.com/sri-nivas1227/OneAssure-assignment-backend```
+  ```$ git clone https://github.com/sri-nivas1227/OneAssure-assignment-backend```
 - Change into the directory
-  ```cd OneAssure-assignment-backend```
+  ```$ cd OneAssure-assignment-backend```
 - Create virtual environment and activate the environment
-  ```python -m venv venv```
-  Windows ```'./venv/scripts/activate'```
-  Linux: ```source venv/bin/activate```
+  ```$ python -m venv venv```
+  Windows ```$ './venv/scripts/activate'```
+  Linux: ```$ source venv/bin/activate```
 - Install required packages
-  ```pip install -r requirements.txt```
+  ```$ pip install -r requirements.txt```
 - Run the server
-  ```flask run```
+  ```$ flask run```
   You can access the server on [localhost:5000](http://localhost:5000/)
+
   
   
     
