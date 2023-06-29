@@ -72,6 +72,7 @@ Opena a terminal and 👇🏻
   Linux: ```$ source venv/bin/activate```
 - Install required packages
   ```$ pip install -r requirements.txt```
+- Change the `MONGO_DB_URI` in the `.env ` file to `mongodb://localhost:27017`
 - Run the server
   ```$ flask run```
   You can access the server on [localhost:5000](http://localhost:5000/)
